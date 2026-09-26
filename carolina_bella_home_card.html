@@ -220,8 +220,26 @@
   document.getElementById('mailVal').textContent = CONFIG.email;
   document.getElementById('waLink').href = "https://wa.me/" + CONFIG.phoneRaw.replace('+','');
 
+  function foldVCardLine(line){
+    // RFC 2425 line folding: max 75 chars per line, continuation lines start with a single space
+    const CRLF = "\r\n";
+    if (line.length <= 75) return line;
+    let out = line.slice(0, 75);
+    let rest = line.slice(75);
+    while (rest.length){
+      out += CRLF + " " + rest.slice(0, 74);
+      rest = rest.slice(74);
+    }
+    return out;
+  }
+
   function saveContact(){
-    const vcard = [
+    const CRLF = "\r\n";
+    const imgEl = document.querySelector('.portrait img');
+    const dataUrl = imgEl ? imgEl.getAttribute('src') : '';
+    const base64Photo = (dataUrl && dataUrl.includes(',')) ? dataUrl.split(',')[1] : '';
+
+    const lines = [
       "BEGIN:VCARD",
       "VERSION:3.0",
       "N:" + CONFIG.fullName.split(' ').reverse().join(';'),
@@ -232,9 +250,14 @@
       "EMAIL:" + CONFIG.email,
       "ADR;TYPE=WORK:;;Calle Puig, 5;Castellón de la Plana;;12004;España",
       "URL:" + CONFIG.website,
-      "NOTE:Idiomas: " + CONFIG.languages,
-      "END:VCARD"
-    ].join("\n");
+      "NOTE:Idiomas: " + CONFIG.languages
+    ];
+    if (base64Photo){
+      lines.push(foldVCardLine("PHOTO;ENCODING=b;TYPE=JPEG:" + base64Photo));
+    }
+    lines.push("END:VCARD");
+
+    const vcard = lines.join(CRLF);
     const blob = new Blob([vcard], {type:"text/vcard"});
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
