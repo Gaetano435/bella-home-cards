@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a1628">
+<meta name="apple-mobile-web-app-title" content="Bella Home">
+<meta name="description" content="Toque el sello para abrir su prospecto. Condiciones de lanzamiento · Octubre 2026.">
+<meta property="og:site_name" content="Bella Home · Luxury Real Estate">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gaetano435.github.io/bella-home-cards/propietarios/">
+<meta property="og:title" content="Prospecto Bella Home">
+<meta property="og:description" content="Documento personal para propietarios · Condiciones de lanzamiento · Octubre 2026">
+<meta property="og:image" content="https://gaetano435.github.io/bella-home-cards/propietarios/og.jpg">
+<meta property="og:image:secure_url" content="https://gaetano435.github.io/bella-home-cards/propietarios/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="600"><meta property="og:image:height" content="600">
+<meta property="og:image:alt" content="Logo Bella Home Luxury Real Estate">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Prospecto Bella Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600&display=swap">
+<style>
+/* Layout: sealed envelope intro → single editorial column, navy night with gold leaf; one bold moment = the seal breaking */
+:root{
+  --navy:#0a1628; --navy-2:#101f38; --navy-3:#16294a;
+  --gold:#c9a84c; --gold-hi:#e3c77a; --ivory:#f8f6f2;
+  --soft:#d4d9e1; --muted:#a9b2c1; --line:rgba(201,168,76,.32);
+  --display:'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --body:'Manrope', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--navy);color:var(--ivory)}
+body{font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;font-variant-numeric:lining-nums;overflow-x:hidden}
+a{color:var(--gold)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+/* ---------- Intro: sealed envelope ---------- */
+.seal-screen{position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;height:100dvh;z-index:50;display:grid;place-items:center;pointer-events:none;-webkit-tap-highlight-color:transparent}
+body.sealed{overflow:hidden;position:fixed;width:100%}
+.half{position:absolute;left:0;right:0;height:50.5%;will-change:transform;-webkit-transform:translateZ(0);background:var(--navy);transition:transform 1.25s cubic-bezier(.77,0,.18,1)}
+.half.top{top:0;border-bottom:1px solid var(--line);background:linear-gradient(var(--navy),var(--navy-2))}
+.half.bot{bottom:0;background:linear-gradient(var(--navy-2),var(--navy))}
+.half.top::after,.half.bot::after{content:"";position:absolute;left:50%;width:min(70vw,420px);height:1px;background:var(--gold);transform:translateX(-50%);opacity:.6}
+.half.top::after{bottom:-1px}.half.bot::after{top:-1px}
+.seal-wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;padding:0 24px;pointer-events:auto;transition:opacity .5s ease, transform .9s ease}
+.to{font-size:11px;letter-spacing:.32em;color:var(--muted);text-transform:uppercase}
+.to-name{font-family:var(--display);font-style:italic;font-size:clamp(26px,6vw,34px);color:var(--ivory);margin-top:-14px}
+.seal{width:min(56vw,220px);height:min(56vw,220px);border:0;padding:0;border-radius:50%;cursor:pointer;background:transparent;display:block;animation:breathe 3s ease-in-out infinite;-webkit-appearance:none;appearance:none}
+.seal img{width:100%;height:100%;display:block;filter:drop-shadow(0 12px 28px rgba(0,0,0,.5))}
+.hint{font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold)}
+@keyframes breathe{50%{transform:scale(1.045)}}
+.opened .half.top{transform:translateY(-101%)}
+.opened .half.bot{transform:translateY(101%)}
+.opened .seal-wrap{opacity:0;transform:scale(1.25)}
+.gone{display:none}
+
+/* ---------- Page ---------- */
+main{max-width:720px;margin:0 auto;padding-inline:20px;padding-block:0 40px}
+section{padding-block:64px;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:400;margin:0;text-wrap:balance}
+h1{font-size:clamp(44px,10vw,76px);line-height:1}
+h1 em{color:var(--gold)}
+h2{font-size:clamp(32px,7vw,46px);line-height:1.05}
+h3{font-size:24px;font-weight:600;line-height:1.2}
+p{margin:0;color:var(--soft);text-wrap:pretty}
+.stack{display:flex;flex-direction:column;gap:20px}
+
+.brand{display:flex;align-items:center;gap:16px;padding-block:28px}
+.mono{width:64px;height:64px;flex-shrink:0}.mono img{width:100%;height:100%;display:block}
+.word{font-family:var(--display);font-size:21px;letter-spacing:.35em}
+.word small{display:block;font-family:var(--body);font-size:9px;letter-spacing:.3em;color:var(--gold);font-weight:600}
+
+.hero{padding-top:48px}
+.rule{width:64px;height:1.5px;background:var(--gold)}
+.lede{font-size:18px;max-width:52ch}
+.badge{align-self:flex-start;border:1px solid var(--gold);padding:10px 16px;display:flex;flex-direction:column;gap:2px}
+.badge b{font-size:10px;letter-spacing:.25em;color:var(--gold);font-weight:600}
+.badge span{font-family:var(--display);font-size:22px}
+
+.pillars{display:grid;gap:0;margin-top:12px}
+.pillar{display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;padding-block:22px;border-top:1px solid var(--line)}
+.pillar .n{font-family:var(--display);font-size:36px;line-height:1;color:var(--gold)}
+.pillar div{display:flex;flex-direction:column;gap:8px;min-width:0}
+
+.incl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.inc{background:var(--navy-2);border:1px solid rgba(248,246,242,.08);padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.inc svg{width:26px;height:26px;stroke:var(--gold);fill:none;stroke-width:1.4}
+.inc strong{font-size:14.5px;font-weight:600}
+.inc p{font-size:13px;line-height:1.5;color:var(--muted)}
+
+.steps{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0;position:relative}
+.steps::before{content:"";position:absolute;left:19px;top:20px;bottom:20px;width:1px;background:var(--gold);opacity:.6}
+.steps li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:18px;padding-bottom:24px;position:relative}
+.steps li:last-child{padding-bottom:0}
+.dot{width:40px;height:40px;border-radius:50%;background:var(--navy-3);border:1px solid var(--gold);color:var(--gold);display:grid;place-items:center;font-family:var(--display);font-size:19px}
+.steps li:last-child .dot{background:var(--gold);color:var(--navy)}
+.steps h3{font-size:21px;margin-top:6px}
+.steps p{font-size:14.5px;margin-top:4px}
+.markets{background:var(--navy-2);border:1px solid var(--line);padding:22px 24px;display:flex;flex-direction:column;gap:10px}
+.markets div{font-family:var(--display);font-size:21px;line-height:1.4}
+
+/* Offer */
+.was{font-size:14px;color:var(--muted)}
+.was s{text-decoration-color:var(--gold)}
+.plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.plan{border:1px solid rgba(248,246,242,.22);padding:24px 20px;display:flex;flex-direction:column;gap:12px;position:relative;min-width:0}
+.plan.hi{border:1.5px solid var(--gold);background:var(--navy-2)}
+.plan .tag{position:absolute;top:-11px;right:14px;background:var(--gold);color:var(--navy);font-size:9.5px;font-weight:600;letter-spacing:.2em;padding:4px 9px}
+.plan b{font-size:10.5px;letter-spacing:.22em;color:var(--muted);font-weight:600}
+.plan.hi b{color:var(--gold)}
+.pct{font-family:var(--display);font-size:clamp(60px,15vw,84px);line-height:.9;font-weight:500}
+.plan.hi .pct{color:var(--gold)}
+.pct small{font-size:.5em}
+.plan p{font-size:13.5px}
+
+.calc{background:var(--navy-2);border:1px solid var(--line);padding:24px;display:flex;flex-direction:column;gap:18px}
+.calc label{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.price{font-family:var(--display);font-size:clamp(36px,9vw,48px);line-height:1;font-variant-numeric:tabular-nums lining-nums}
+input[type=range]{width:100%;accent-color:var(--gold);height:28px}
+.ticks{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);margin-top:-10px}
+.rows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rows div{padding:14px 0 14px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.rows div:first-child{padding-left:0}
+.rows div+div{border-left:1px solid var(--line)}
+.rows span{font-size:11.5px;color:var(--muted)}
+.rows strong{font-family:var(--display);font-size:clamp(20px,5.4vw,28px);font-weight:500;font-variant-numeric:tabular-nums lining-nums}
+.rows .old strong{text-decoration:line-through;color:var(--muted)}
+.rows .best span,.rows .best strong{color:var(--gold)}
+.save{font-size:15px;color:var(--ivory)}
+.save em{font-style:normal;color:var(--gold);font-weight:600}
+.fine{font-size:12px;color:var(--muted)}
+
+/* Contact */
+.contact{display:flex;flex-direction:column;gap:6px}
+.contact .name{font-family:var(--display);font-size:34px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;font:600 14px var(--body);letter-spacing:.06em;text-decoration:none;border:1px solid var(--gold);color:var(--gold);background:transparent}
+.btn.solid{background:var(--gold);color:var(--navy)}
+.btn svg{width:18px;height:18px;fill:currentColor}
+.addr{font-size:12.5px;color:var(--muted);margin-top:14px}
+footer{max-width:720px;margin:0 auto;padding:24px 20px 48px;font-size:11px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;text-align:center}
+
+/* entrance: visible at rest, gently lifted when JS marks them */
+.rise{transition:opacity .8s ease, transform .8s ease}
+.js .rise.wait{opacity:.001;transform:translateY(18px)}
+
+@media (max-width:480px){
+  .incl,.plans{grid-template-columns:1fr}
+  .plan .tag{right:12px}
+}
+@media (prefers-reduced-motion:reduce){
+  .half,.seal-wrap,.rise{transition:none!important}
+  .seal{animation:none}
+}
+
+/* music toggle */
+.sound{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom, 0px));z-index:40;width:48px;height:48px;border-radius:50%;border:1px solid var(--gold);background:rgba(10,22,40,.82);color:var(--gold);display:grid;place-items:center;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);opacity:0;transform:translateY(10px);transition:opacity .6s ease .9s, transform .6s ease .9s;-webkit-tap-highlight-color:transparent}
+.sound.show{opacity:1;transform:none}
+.sound svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
+.sound .off{display:none}
+.sound.muted .on{display:none}.sound.muted .off{display:inline}
+.bars{display:flex;gap:2px;align-items:flex-end;height:14px}
+.bars i{width:2px;background:var(--gold);animation:eq 1.2s ease-in-out infinite;height:40%}
+.bars i:nth-child(2){animation-delay:.3s}.bars i:nth-child(3){animation-delay:.6s}
+@keyframes eq{50%{height:100%}}
+.sound.muted .bars{display:none}
+@media (prefers-reduced-motion:reduce){.bars i{animation:none}}
+</style>
+
+</head>
+<body>
+<div class="seal-screen" id="seal" aria-hidden="false">
+  <div class="half top"></div>
+  <div class="half bot"></div>
+  <div class="seal-wrap">
+    <div class="to">Prospecto Bella Home · Documento personal para</div>
+    <div class="to-name" id="toName">Propietario/s</div>
+    <button class="seal" id="open" aria-label="Abrir el prospecto"><img src="logo.png" alt="Bella Home Luxury Real Estate" width="220" height="220"></button>
+    <div class="hint">Toque el sello para abrir</div>
+  </div>
+</div>
+
+<main id="top">
+  <div class="brand">
+    <div class="mono"><img src="logo.png" alt="" width="64" height="64"></div>
+    <div class="word">BELLA HOME<small>LUXURY REAL ESTATE · ESPAÑA</small></div>
+  </div>
+
+  <section class="hero stack rise">
+    <div class="eyebrow">Dosier para propietarios · Castellón · Valencia</div>
+    <h1>Vender una propiedad de valor exige <em>método</em>.</h1>
+    <div class="rule"></div>
+    <p class="lede">Experiencia inmobiliaria, acompañamiento personal y un proceso de compraventa digitalizado de principio a fin. Usted decide; nosotros nos ocupamos de todo lo demás.</p>
+    <div class="badge"><b>CONDICIONES DE LANZAMIENTO</b><span>Octubre 2026</span></div>
+  </section>
+
+  <section class="stack rise">
+    <div class="eyebrow">Por qué Bella Home</div>
+    <h2>Tres compromisos que marcan la diferencia en su venta.</h2>
+    <div class="pillars">
+      <div class="pillar"><span class="n">01</span><div><h3>Experiencia inmobiliaria</h3><p>Años de trabajo y experiencia en el mercado y sector inmobiliario, excelentes acuerdos de ventas cerradas con compradores de España, Italia, Francia, Reino Unido y Alemania. Conocemos el precio real de su zona y cómo defenderlo en la negociación.</p></div></div>
+      <div class="pillar"><span class="n">02</span><div><h3>Acompañamiento asistido</h3><p>Un único interlocutor de la valoración a la notaría. Le informamos de cada visita, cada oferta y cada paso, sin que tenga que preguntar. Atendemos en español, italiano e inglés.</p></div></div>
+      <div class="pillar"><span class="n">03</span><div><h3>Compraventa sin estrés, con proceso automatizado</h3><p>Expediente digital con lista de documentos, avisos automáticos y seguimiento paso a paso: nota simple, certificado energético, cédula de habitabilidad, IBI, plusvalía, etc. No dejamos nada al azar. Todo a tiempo y sin sorpresas.</p></div></div>
+    </div>
+  </section>
+
+  <section class="stack rise">
+    <div class="eyebrow">Incluido en nuestro servicio</div>
+    <div class="incl">
+      <div class="inc"><svg viewBox="0 0 24 24"><path d="M3 8h4l2-3h6l2 3h4v11H3z"/><circle cx="12" cy="13" r="4"/></svg><strong>Reportaje fotográfico profesional</strong><p>Luz, encuadre y edición pensados para compradores de alto nivel.</p></div>
+      <div class="inc"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18"/><path d="M3 12h8v9M11 3v5M15 12h6M15 12v4"/></svg><strong>Plano 2D de la vivienda</strong><p>Distribución clara y a escala, el documento que más consulta el comprador.</p></div>
+      <div class="inc"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg><strong>Red de inversores y compradores</strong><p>Acceso a nuestra cartera de compradores de alta gama, nacionales e internacionales.</p></div>
+      <div class="inc"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13l2 2 4-4"/></svg><strong>Gestión documental completa</strong><p>Del primer certificado a la firma de arras y escritura.</p></div>
+    </div>
+  </section>
+
+  <section class="stack rise">
+    <div class="eyebrow">Cómo trabajamos</div>
+    <h2>Cinco pasos, un solo interlocutor, ninguna sorpresa.</h2>
+    <ol class="steps">
+      <li><span class="dot">1</span><div><h3>Valoración confidencial</h3><p>Visitamos la propiedad, analizamos operaciones reales de la zona y fijamos con usted un precio de salida sólido.</p></div></li>
+      <li><span class="dot">2</span><div><h3>Preparación</h3><p>Reportaje fotográfico, plano 2D y expediente documental digital. Antes de la primera visita, todo está en orden.</p></div></li>
+      <li><span class="dot">3</span><div><h3>Presentación a nuestra red</h3><p>Su propiedad llega a inversores y compradores de alta gama, en España y en el extranjero, con un único objetivo: vender su inmueble en el menor tiempo posible.</p></div></li>
+      <li><span class="dot">4</span><div><h3>Visitas y negociación</h3><p>Filtramos a cada comprador antes de abrirle la puerta. Usted solo recibe ofertas serias, con nuestra recomendación.</p></div></li>
+      <li><span class="dot">5</span><div><h3>Arras, notaría y entrega de llaves</h3><p>Coordinamos contrato de reserva, arras, notaría y entrega. Usted firma; nosotros nos ocupamos del proceso.</p></div></li>
+    </ol>
+    <div class="markets"><span class="eyebrow">Mercados a los que presentamos su propiedad</span><div>España · Italia · Estados Unidos · Suiza · Países nórdicos · Alemania · Países Bajos · Reino Unido</div></div>
+  </section>
+
+  <section class="stack rise" id="oferta">
+    <div class="eyebrow">Condiciones de lanzamiento · solo en octubre</div>
+    <h2>El mismo servicio completo. La mitad de honorarios, o menos.</h2>
+    <div class="was">Nuestra tarifa habitual: <s>3 %</s> sobre el precio de venta.</div>
+    <div class="plans">
+      <div class="plan"><b>SIN EXCLUSIVA</b><div class="pct">1,5<small> %</small></div><p>Libertad total: puede seguir vendiendo por su cuenta o con otras agencias. Incluye todo el servicio.</p></div>
+      <div class="plan hi"><span class="tag">RECOMENDADA</span><b>EN EXCLUSIVA · 3 MESES</b><div class="pct">1<small> %</small></div><p>Un precio único en el mercado y un solo interlocutor durante tres meses. Trabajamos con clientes comprometidos.</p></div>
+    </div>
+
+    <div class="calc">
+      <label for="precio">Calcule su caso · precio de venta</label>
+      <div class="price" id="priceOut" aria-live="polite">500.000 €</div>
+      <input type="range" id="precio" min="200000" max="3000000" step="10000" value="500000">
+      <div class="ticks"><span>200.000 €</span><span>3.000.000 €</span></div>
+      <div class="rows">
+        <div class="old"><span>Tarifa habitual 3 %</span><strong id="f3">15.000 €</strong></div>
+        <div><span>Sin exclusiva 1,5 %</span><strong id="f15">7.500 €</strong></div>
+        <div class="best"><span>En exclusiva 1 %</span><strong id="f1">5.000 €</strong></div>
+      </div>
+      <p class="save">Con la exclusiva, usted conserva <em id="sv">10.000 €</em> frente a la tarifa habitual.</p>
+    </div>
+    <p class="fine">Honorarios sobre el precio final de venta, IVA no incluido. Válido para encargos de venta firmados del 1 al 31 de octubre de 2026.</p>
+  </section>
+
+  <section class="rise">
+    <div class="contact">
+      <div class="eyebrow">Su interlocutora</div>
+      <div class="name">Carolina Peña</div>
+      <p>Directora · Bella Home Luxury Real Estate</p>
+      <div class="cta">
+        <a class="btn solid" id="wa" href="https://wa.me/34745042698" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>Escribir por WhatsApp</a>
+        <a class="btn" href="https://www.bellahome.com.es" target="_blank" rel="noopener">www.bellahome.com.es</a>
+      </div>
+      <p class="addr">+34 745 04 26 98 · Carrer Puig, 5 · 12004 Castellón de la Plana</p>
+    </div>
+  </section>
+</main>
+<footer>Bella Home · Luxury Real Estate · España</footer>
+
+<audio id="bgm" src="musica.mp3" loop preload="auto" playsinline></audio>
+<button class="sound" id="sound" aria-label="Silenciar música" aria-pressed="false" type="button">
+  <span class="on bars" aria-hidden="true"><i></i><i></i><i></i></span>
+  <svg class="off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M17 9l4 6M21 9l-4 6"/></svg>
+</button>
+<script>
+(function(){
+  var root=document.documentElement; root.classList.add('js'); document.body.classList.add('sealed');
+  // personal name: ?n=Sr.%20García (works when self-hosted)
+  var name=null;
+  try{ name=new URLSearchParams(location.search).get('n'); }catch(e){}
+  if(name){ name=name.slice(0,60); document.getElementById('toName').textContent=name; }
+  var seal=document.getElementById('seal'), btn=document.getElementById('open'), done=false;
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function open(){
+    if(done) return; done=true;
+    seal.classList.add('opened'); seal.setAttribute('aria-hidden','true'); document.body.classList.remove('sealed'); window.scrollTo(0,0);
+    reveal();
+    setTimeout(function(){ seal.classList.add('gone'); }, reduce?0:1300);
+  }
+  btn.addEventListener('click',function(){ startMusic(); open(); });
+  // background music: starts with the seal tap (browsers only allow sound after a touch)
+  var bgm=document.getElementById('bgm'), sb=document.getElementById('sound'), muted=false;
+  function startMusic(){ if(!bgm) return; var pr=bgm.play(); if(pr&&pr.catch) pr.catch(function(){ sb.classList.add('muted'); muted=true; }); sb.classList.add('show'); }
+  sb.addEventListener('click',function(){
+    muted=!muted; sb.classList.toggle('muted',muted);
+    sb.setAttribute('aria-pressed',String(muted)); sb.setAttribute('aria-label',muted?'Activar música':'Silenciar música');
+    if(muted){ bgm.pause(); } else { bgm.play().catch(function(){}); }
+  });
+  document.addEventListener('visibilitychange',function(){ if(document.hidden){ bgm.pause(); } else if(!muted && sb.classList.contains('show')){ bgm.play().catch(function(){}); } });
+
+  btn.focus({preventScroll:true});
+  setTimeout(function(){ if(!done){ open(); muted=true; sb.classList.add('muted','show'); sb.setAttribute('aria-label','Activar música'); } }, reduce?400:4500); // opens by itself if not tapped
+
+  // gentle rise on scroll; content stays visible if observer is unavailable
+  var items=[].slice.call(document.querySelectorAll('.rise'));
+  function reveal(){
+    if(!('IntersectionObserver' in window)||reduce) return;
+    items.forEach(function(el,i){ if(i>0) el.classList.add('wait'); });
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.remove('wait'); io.unobserve(e.target);} }); },{rootMargin:'0px 0px -8% 0px'});
+    items.forEach(function(el){ io.observe(el); });
+    setTimeout(function(){ items.forEach(function(el){ el.classList.remove('wait'); }); }, 9000);
+  }
+
+  // calculator
+  var r=document.getElementById('precio');
+  var fmt=function(v){ return String(Math.round(v)).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+' €'; };
+  function calc(){
+    var p=+r.value;
+    document.getElementById('priceOut').textContent=fmt(p);
+    document.getElementById('f3').textContent=fmt(p*.03);
+    document.getElementById('f15').textContent=fmt(p*.015);
+    document.getElementById('f1').textContent=fmt(p*.01);
+    document.getElementById('sv').textContent=fmt(p*.02);
+    var msg='Hola Carolina, he recibido el dosier de Bella Home. Me interesan las condiciones de octubre para vender mi propiedad (precio aproximado: '+fmt(p)+').';
+    document.getElementById('wa').href='https://wa.me/34745042698?text='+encodeURIComponent(msg);
+  }
+  r.addEventListener('input',calc); calc();
+})();
+</script>
+
+</body>
+</html>
